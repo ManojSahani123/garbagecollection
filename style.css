@@ -2,18 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Tangerine:wght@400;700&family=The+Nautigal:wght@400;700&family=Ubuntu:wght@400;500;700&display=swap');
 
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 /* creating variables  */
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 :root{
     --primary: rgb(13, 104, 13);
-    --secondary: rgb(109, 192, 109);
+    --secondary: rgb(239, 239, 239);
     --white: #fff;
     --black: #000;
-    --clr1: rgb(250, 254, 0);
+    --clr1: rgb(194, 255, 195);
 }
 
 /* common styling goes here  */
@@ -24,6 +29,28 @@ section{
 .max-width{
     width: 100%;
     padding: 0 50px;
+}
+section h1{
+    color: var(--primary);
+    text-align: center;
+    padding: 10px 0;
+}
+button{
+    outline: none;
+    border: none;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 1.2rem;
+    letter-spacing: 1.1px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+button:hover{
+    background-color: var(--white);
+    color: var(--primary);
+    box-shadow: 0 0 10px var(--primary);
 }
 
 /* header section styling starts here  */
@@ -104,25 +131,109 @@ main p{
 main p span{
     color: var(--primary);
 }
-main button{
-    outline: none;
-    border: none;
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: var(--primary);
-    color: var(--white);
-    font-size: 1.2rem;
-    letter-spacing: 1.1px;
+
+/* about section styling starts here  */
+.about{
+    background-color: var(--secondary);
+}
+.about .about-container{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+}
+.about .top, .about .down{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    gap: 20px;
+}
+.about p{
+    text-align: justify;
+    font-size: 0.9rem;
+
+}
+.about img{
+    width: 200px;
+    height: 200px;
+}
+
+/* service section styling starts here  */
+.services .service-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 90vh;
+    gap: 10px;
+}
+.services .service-box{
+    margin: 0 auto;
+    width: 32%;
+    background: var(--clr1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
     cursor: pointer;
     transition: all 0.5s ease;
 }
-main button:hover{
-    background-color: var(--white);
-    color: var(--primary);
-    box-shadow: 0 0 10px var(--primary);
+.services .service-box:hover{
+    box-shadow: 0 0 10px var(--secondary);
+}
+.services .service-box h2{
+    font-size: 1.3rem;
+}
+.services .service-box p{
+    text-align: justify;
+    width: 80%;
+
 }
 
-/* about section styling starts here  */
+
+/* team section styling begins here  */
+.team{
+    background-color: var(--secondary);
+    height: 75vh;
+}
+.team .container{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.team .container .card{
+    background: var(--clr1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.team .container .card img{
+    height: 200px;
+    width: 100%;
+}
+
+.card h2{
+    font-size: 1.2rem;
+    letter-spacing: 1.2px;
+    font-weight: 500;
+}
+.card p{
+    text-align: justify;
+    width: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* code for responsive web desingn */
